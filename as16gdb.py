@@ -87,7 +87,7 @@ def serverThree():
 
 			strval1 = str(data1.decode("utf-8"))
 
-			a,b,c,d,e,f,g,h = strval1.split("+")
+			a,b,c,d,e,f,g = strval1.split("+")
 
 			inserted_values = (
         		a,
@@ -96,11 +96,10 @@ def serverThree():
         		d,
         		e,
         		f,
-        		g,
-				h
+        		g
     		)
 
-			cursor.execute(" INSERT INTO s16m3(dtime, cb_ctrl, cb_res, i_res, p_res, q_res, v_res, i_res) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)", inserted_values)
+			cursor.execute(" INSERT INTO s16m3(dtime, cb_ctrl, cb_res, i_res, p_res, q_res, v_res) VALUES (%s,%s,%s,%s,%s,%s,%s)", inserted_values)
 
 			print("3")
 
